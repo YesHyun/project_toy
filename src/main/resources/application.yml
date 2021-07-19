@@ -1,0 +1,22 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /
+#    encoding:
+#      charset: UTF-8
+#      enabled: true
+#      force: true
+
+spring:
+  profiles:
+    include:
+      - db
+      - oauth
+      - images
+      - mail
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    static-path-pattern: /resources/**
